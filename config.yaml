@@ -1,0 +1,42 @@
+# Auto Publisher Configuration
+
+# API Keys
+api:
+  openai:
+    api_key: "YOUR_OPENAI_API_KEY"
+  stability_ai:  # Alternative image generation
+    api_key: "YOUR_STABILITY_API_KEY"
+
+# Image Generation Settings
+image_generation:
+  default_engine: "openai"  # or "stability_ai"
+  default_model: "dall-e-3"  # for OpenAI
+  image_size: "1024x1024"
+  quality: "standard"
+  style: "children"  # Style appropriate for children's books
+
+# Layout Settings
+layout:
+  page_size: "A5"  # Common book size
+  margins:
+    top: 15
+    bottom: 15
+    left: 20
+    right: 20
+  default_font: "Arial"
+  title_font: "Arial-Bold"
+  font_sizes:
+    title: 18
+    heading: 16
+    body: 12
+
+# Output Settings
+output:
+  formats:
+    - "pdf"
+    # - "epub"  # Uncomment to enable Kindle/EPUB output
+  pdf:
+    quality: "print"  # "screen" or "print"
+    resolution: 300  # DPI
+  epub:
+    toc_title: "Table of Contents"
